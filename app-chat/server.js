@@ -7,10 +7,13 @@ const serverHttp = http.createServer(app);
 const io = require('socket.io')(serverHttp);
 
 io.addListener('connection', (socket) => {
+
     console.log('um usuario logou');
+
     socket.addListener('new message', (msg) => {
         io.emit('new message', msg);
     });
+
 });
 
 app.use(express.static('public'));

@@ -8,8 +8,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.navegacao {
-  
+.navegacao {  
   display: flex;
   gap: 0.1rem;
   margin-top: 1rem;
@@ -32,12 +31,10 @@
   }
 }
 
-
 input:checked + label {
   box-shadow: 3px 2px 10px #002;
   background-color: #000050;
 }
-
 
 .container-item-cardapio {
   display: flex;
@@ -61,8 +58,6 @@ input:checked + label {
   }
 }
 
-
-
 .menu {
   display: flex;
   flex-direction: row;
@@ -79,4 +74,3 @@ input:checked + label {
   border-radius: 15px;
   box-shadow: -2px 2px 20px #002;
 }
-

@@ -5,10 +5,12 @@ const chat = document.getElementById('msgs');
 const socket = io();
 
 btnSend.addEventListener('click', () => {
+
     if(msgBox.value !== ""){
         socket.emit('new message', msgBox.value);
         msgBox.value = "";
     }
+
 })
 
 socket.addEventListener('new message', (msg) => {

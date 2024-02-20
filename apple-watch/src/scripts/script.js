@@ -38,6 +38,7 @@ let selectedSize = 1;
 let selectedColor = 1;
 
 function changeImage(){
+
     const idSelectedOption = document.querySelector('[name="img-option"]:checked').id;
     selectedImg = idSelectedOption.charAt(0);
     imgView.src = './src/img/color-options/'+ colorOptions[selectedColor].folder + '/image-' + selectedImg+'.jpeg';
@@ -45,16 +46,20 @@ function changeImage(){
 
 function changeSize(){
     const idSelectedOption = document.querySelector('[name="size-option"]:checked').id;
+
     selectedSize = idSelectedOption.charAt(0);
     titleProd.innerText = "Pulseira loop esportiva "+colorOptions[selectedColor].name+" para caixa de "+sizeOptions[selectedSize];
+
     if (sizeOptions[selectedSize] === '41 mm'){
         imgView.classList.add('small-box');
-    }else{
+    }
+    else{
         imgView.classList.remove('small-box');
     }
 }
 
 function changeColor(){
+
     const idSelectedOption = document.querySelector('[name="color-option"]:checked').id;
     selectedColor = idSelectedOption.charAt(0);
     titleProd.innerText = "Pulseira loop esportiva "+colorOptions[selectedColor].name+" para caixa de "+sizeOptions[selectedSize];
